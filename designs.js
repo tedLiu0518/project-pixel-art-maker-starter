@@ -4,10 +4,36 @@
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid() {
-    const height = document.getElementById("inputHeight");
-    const width = document.getElementById("inputWidth");
-    const submit = document.getElementById("submit");
+    
+    
 // Your code goes here!
 }
 
-submit.addEvent
+function changeColor(){
+    
+}
+
+
+var color = document.getElementById("colorPicker").value
+
+function create(){
+    var table = document.getElementById("pixelCanvas")
+    while(table.firstChild){
+        table.removeChild(table.firstChild)
+    }
+    const height = document.getElementById("inputHeight").value;
+    const width = document.getElementById("inputWidth").value;
+    for(var i=0;i<height;i++){
+        var tr = document.createElement("tr")
+        table.appendChild(tr)
+        for(var k=0;k<width;k++){
+            var td = document.createElement("td")
+            tr.appendChild(td)
+        }
+    }
+}
+
+const button = document.getElementById("button");
+button.addEventListener("click",function(){
+    create()
+})
