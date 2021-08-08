@@ -9,8 +9,8 @@ function makeGrid() {
 // Your code goes here!
 }
 
-function changeColor(){
-    
+function changeColor(element){
+    element.style.backgroundcolor="blue"
 }
 
 
@@ -29,6 +29,7 @@ function create(){
         for(var k=0;k<width;k++){
             var td = document.createElement("td")
             tr.appendChild(td)
+            td.addEventListener("click",changeColor(td))
         }
     }
 }
